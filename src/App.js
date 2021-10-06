@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Navigation from './navigation';
 import { Switch, Route } from 'react-router-dom';
 import Home from './pages/home';
+import FormatJSON from './pages/format_json';
 
 class App extends Component {
   render() {
@@ -25,7 +26,6 @@ class App extends Component {
 
 const About = () => <div><h2>About</h2></div>
 const FormatXML = () => <div><h2>Format XML</h2></div>
-const FormatJSON = () => <div><h2>Format JSON</h2></div>
 const FormatHTML = () => <div><h2>Format HTML</h2></div>
 const FormatSQL = () => <div><h2>Format SQL</h2></div>
 
