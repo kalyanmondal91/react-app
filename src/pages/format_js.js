@@ -2,22 +2,22 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import beautify from 'beautify';
 
-class FormatJSON extends Component {
+class FormatJS extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            inputJson: "",
-            outputJson: ""
+            inputJs: "",
+            outputJs: ""
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleChange(event) {
-        this.setState({ inputJson: event.target.value });
+        this.setState({ inputJs: event.target.value });
     }
     handleSubmit(event) {
-        var data = this.state.inputJson;
-        this.setState({ outputJson: beautify(data, {format: 'json'}) });
+        var data = this.state.inputJs;
+        this.setState({ outputJs: beautify(data, {format: 'js'}) });
         event.preventDefault();
     }
     render() {
@@ -25,16 +25,16 @@ class FormatJSON extends Component {
             <Container>
                 <Form onSubmit={this.handleSubmit}>
                     <Row>
-                        <Col>
+                        <Col md>
                             <Form.Group className="mb-3" controlId="formatJson.input">
-                                <Form.Label>Json Data</Form.Label>
-                                <Form.Control as="textarea" rows={15} onChange={this.handleChange} value={this.state.inputJson} placeholder="Paste your json" />
+                                <Form.Label>JS Data</Form.Label>
+                                <Form.Control as="textarea" rows={15} onChange={this.handleChange} value={this.state.inputJs} placeholder="Paste your JS" />
                             </Form.Group>
                         </Col>
-                        <Col>
+                        <Col md>
                             <Form.Group className="mb-3" controlId="formatJson.output">
-                                <Form.Label>Formatted Json Data</Form.Label>
-                                <Form.Control as="textarea" rows={15} readOnly value={this.state.outputJson} placeholder="Json Output" />
+                                <Form.Label>Formatted JS Data</Form.Label>
+                                <Form.Control as="textarea" rows={15} readOnly value={this.state.outputJs} placeholder="JS Output" />
                             </Form.Group>
                         </Col>
                     </Row>
@@ -51,4 +51,4 @@ class FormatJSON extends Component {
     }
 }
 
-export default FormatJSON;
+export default FormatJS;

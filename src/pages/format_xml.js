@@ -16,6 +16,7 @@ class FormatXML extends Component {
         this.setState({ inputXml: event.target.value });
     }
     handleSubmit(event) {
+        this.setState({disabled: true});
         var option = {
             indentation: '\t',
             filter: (node) => node.type !== 'Comment',
@@ -31,13 +32,13 @@ class FormatXML extends Component {
             <Container>
                 <Form onSubmit={this.handleSubmit}>
                     <Row>
-                        <Col>
+                        <Col md>
                             <Form.Group className="mb-3" controlId="formatXml.input">
                                 <Form.Label>XML Data</Form.Label>
                                 <Form.Control as="textarea" rows={15} onChange={this.handleChange} value={this.state.inputXml} placeholder="Paste your XML" />
                             </Form.Group>
                         </Col>
-                        <Col>
+                        <Col md>
                             <Form.Group className="mb-3" controlId="formatXml.output">
                                 <Form.Label>Formatted XML Data</Form.Label>
                                 <Form.Control as="textarea" rows={15} readOnly value={this.state.outputXml} placeholder="XML Output" />

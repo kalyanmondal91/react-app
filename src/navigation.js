@@ -15,7 +15,8 @@ class Navigation extends Component {
                                 <NavDropdown.Item href="#/formatter/xml">XML</NavDropdown.Item>
                                 <NavDropdown.Item href="#/formatter/json">JSON</NavDropdown.Item>
                                 <NavDropdown.Item href="#/formatter/html">HTML</NavDropdown.Item>
-                                <NavDropdown.Item href="#/formatter/sql">SQL</NavDropdown.Item>
+                                <NavDropdown.Item href="#/formatter/css">CSS</NavDropdown.Item>
+                                <NavDropdown.Item href="#/formatter/js">JS</NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown title="Validator" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="/validator/xml">XML</NavDropdown.Item>
